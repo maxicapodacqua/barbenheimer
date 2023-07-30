@@ -1,0 +1,17 @@
+spin_manifest_version = "1"
+authors = ["Maximiliano Capodacqua <kapomaxi1@gmail.com>"]
+description = "Receives a message from a redis instance"
+name = "barbenheimer-redis"
+trigger = { type = "redis", address = "redis://localhost:6379" }
+version = "0.1.0"
+
+[[component]]
+id = "parse-vote"
+source = "parse-vote/target/wasm32-wasi/release/parse_vote.wasm"
+allowed_http_hosts = []
+[component.trigger]
+channel = "vote"
+[component.build]
+workdir = "parse-vote"
+command = "make"
+# command = "cargo build --target wasm32-wasi --release"
