@@ -9,6 +9,7 @@ version = "0.1.0"
 id = "counter"
 source = "counter/target/wasm32-wasi/release/counter.wasm"
 allowed_http_hosts = []
+sqlite_databases = ["default"]
 [component.trigger]
 channel = "vote"
 [component.build]
