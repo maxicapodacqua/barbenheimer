@@ -1,5 +1,5 @@
 [package]
-name = "parse-vote"
+name = "counter"
 authors = ["Maximiliano Capodacqua <kapomaxi1@gmail.com>"]
 description = "Receives a message from a Redit instance and parses it to be stored in a DB"
 version = "0.1.0"

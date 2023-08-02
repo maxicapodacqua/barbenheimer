@@ -6,12 +6,12 @@ trigger = { type = "redis", address = "redis://localhost:6379" }
 version = "0.1.0"
 
 [[component]]
-id = "parse-vote"
-source = "parse-vote/target/wasm32-wasi/release/parse_vote.wasm"
+id = "counter"
+source = "counter/target/wasm32-wasi/release/counter.wasm"
 allowed_http_hosts = []
 [component.trigger]
 channel = "vote"
 [component.build]
-workdir = "parse-vote"
+workdir = "counter"
 command = "make"
 # command = "cargo build --target wasm32-wasi --release"
